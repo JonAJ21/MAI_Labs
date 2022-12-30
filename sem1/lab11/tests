@@ -1,0 +1,57 @@
+Тесты:
+1)
+Ввод: 12 14
+Вывод:
+Penultimate num: 12
+Number: 1 ; 3cc: 1 ; 7cc: 1 ; 11cc: 1
+Number: 2 ; 3cc: 2 ; 7cc: 2 ; 11cc: 2
+
+2)  
+Ввод: 168371  , 8319, u332, 92, jdklsa
+Вывод: 
+Penultimate num: 8319
+Number: 8 ; 3cc: 22 ; 7cc: 11 ; 11cc: 8
+Number: 3 ; 3cc: 10 ; 7cc: 3 ; 11cc: 3
+Number: 1 ; 3cc: 1 ; 7cc: 1 ; 11cc: 1
+Number: 9 ; 3cc: 100 ; 7cc: 12 ; 11cc: 9
+3)
+Ввод: 73681 hjah8371kda93 hka823 3891
+Вывод:
+Penultimate num: 73681
+Number: 7 ; 3cc: 21 ; 7cc: 10 ; 11cc: 7
+Number: 3 ; 3cc: 10 ; 7cc: 3 ; 11cc: 3
+Number: 6 ; 3cc: 20 ; 7cc: 6 ; 11cc: 6
+Number: 8 ; 3cc: 22 ; 7cc: 11 ; 11cc: 8
+Number: 1 ; 3cc: 1 ; 7cc: 1 ; 11cc: 1
+4)
+Ввод: 319             9318 hkajd              9301nkjadjikpa301       39u2u391 31
+Вывод: 
+Penultimate_num: 9318
+Number: 9 ; 3cc: 100 ; 7cc: 12 ; 11cc: 9
+Number: 3 ; 3cc: 10 ; 7cc: 3 ; 11cc: 3
+Number: 1 ; 3cc: 1 ; 7cc: 1 ; 11cc: 1
+Number: 8 ; 3cc: 22 ; 7cc: 11 ; 11cc: 8
+5)
+Ввод: 381,28dka,kjhda,kda,01djakl,;kaodkao,1
+Вывод: 
+Penultimate_num: 381
+Number: 3 ; 3cc: 10 ; 7cc: 3 ; 11cc: 3
+Number: 8 ; 3cc: 22 ; 7cc: 11 ; 11cc: 8
+Number: 1 ; 3cc: 1 ; 7cc: 1 ; 11cc: 1
+6)
+Ввод: 37819n,mad,3891u,-1329,32
+Вывод:
+Penultimate_num: 1329
+Number: 1 ; 3cc: 1 ; 7cc: 1 ; 11cc: 1
+Number: 3 ; 3cc: 10 ; 7cc: 3 ; 11cc: 3
+Number: 2 ; 3cc: 2 ; 7cc: 2 ; 11cc: 2
+Number: 9 ; 3cc: 100 ; 7cc: 12 ; 11cc: 9
+7)
+Ввод: 31 31031 31
+Вывод:
+Penultimate_num: 31031
+Number: 3 ; 3cc: 10 ; 7cc: 3 ; 11cc: 3
+Number: 1 ; 3cc: 1 ; 7cc: 1 ; 11cc: 1
+Number: 0 ; 3cc: 0 ; 7cc: 0 ; 11cc: 0
+Number: 3 ; 3cc: 10 ; 7cc: 3 ; 11cc: 3
+Number: 1 ; 3cc: 1 ; 7cc: 1 ; 11cc: 1
