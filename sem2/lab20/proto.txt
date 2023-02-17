@@ -17,7 +17,33 @@ jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ rm filetr1 filetr2
 
 2. 26
 
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat fileiconv
+Привет iconv!!!
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ iconv -f UTF-8 -t KOI8-R fileiconv
+������ iconv!!!
 
+3. 2
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > comm1
+comm1
+comm2
+comm3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > comm2
+comm1
+comm2   
+comm4
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ comm comm1 comm2
+                comm1
+                comm2
+comm3
+        comm4
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ comm -23 comm1 comm2
+comm3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ comm -23 comm2 comm1
+comm4
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ comm -12 comm1 comm2
+comm1
+comm2
 
 4.  №5
 jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filediff1
