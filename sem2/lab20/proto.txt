@@ -1,0 +1,52 @@
+Вариант 10
+Обязательные команды под номером 11, 26, 2
+
+Начало протокола:
+
+
+1. 11
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ tr x z
+hello xxx      
+hello zzz
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filetr1
+BBBBaaaassssHHHH UUUUnnniiixx
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ tr -s [:upper:][:lower:] < filetr1 > filetr2
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat filetr2
+BasH Unix
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ rm filetr1 filetr2
+
+2. 26
+
+
+
+4.  №5
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filediff1
+Hello Diff
+Hello
+hi 
+Lab20
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filediff2
+Hello Diff 
+Hello
+hello
+Lab20
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ diff filediff1 filediff2
+3c3
+< hi
+---
+> hello
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cp filediff1 filediff3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat filediff3
+Hello Diff
+Hello
+hi
+Lab20
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ diff filediff1 filediff3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ rm filediff1 filediff3 filediff2
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ ls
+proto.txt
+
+
+
+
+
