@@ -45,7 +45,7 @@ jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ comm -12 comm1 comm2
 comm1
 comm2
 
-4.  №5
+4.  5
 jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filediff1
 Hello Diff
 Hello
@@ -72,7 +72,142 @@ jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ rm filediff1 filediff3 filed
 jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ ls
 proto.txt
 
+5. 1
 
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > cmp1
+Hello cmp!!
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > cmp2
+Hi cmp
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cp cmp1 cmp3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cmp cmp1 cmp2
+cmp1 cmp2 различаются: байт 2, строка 1
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cmp cmp1 cmp3
 
+6. 3
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ wc
+Linux
+Ubuntu
+Unix
+      3       3      18
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ echo "Hello wc" | wc
+      1       2       9
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ wc *.txt
+  78  157 2016 proto.txt
+
+7. 6
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filegrep1
+Hello word
+word
+world da
+mkfls
+k   
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ grep 'word' filegrep1 
+Hello word
+word
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ grep -i 'word' filegrep1 
+Hello word
+word
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ grep -i 'wor' filegrep1 
+Hello word
+word
+world da
+
+8.7
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filejoin1
+hello1 join1  
+hello2 join2
+hello3 join3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filejoin2
+hello1 j    
+hello2 jioldsa
+hello3 djhsd;
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ join filejoin1 filejoin2
+hello1 join1 j
+hello2 join2 jioldsa
+hello3 join3 djhsd;
+
+9. 8
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filesort1
+computer
+mouse
+LAPTOP
+data
+RedHat
+laptop
+debian
+laptop 
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ sort filesort1
+computer
+data
+debian
+laptop
+laptop
+LAPTOP
+mouse
+RedHat
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ sort -r filesort1
+RedHat
+mouse
+LAPTOP
+laptop
+laptop
+debian
+data
+computer
+
+10. 9
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filetail1
+abcd
+head 
+body
+tail
+dls;
+dls
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ tail filetail1 
+abcd
+head
+body
+tail
+dls;
+dls
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ tail -n 3 filetail1 
+tail
+dls;
+dls
+
+11. 10
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ ls -la | tee output
+итого 28
+drwxrwxr-x 2 jonaj jonaj 4096 фев 18 12:32 .
+drwxrwxr-x 3 jonaj jonaj 4096 фев 17 21:37 ..
+-rw-rw-r-- 1 jonaj jonaj   29 фев 18 12:29 filetail1
+-rw-rw-r-- 1 jonaj jonaj 8393 фев 11 01:00 l20-2012.djvu
+-rw-rw-r-- 1 jonaj jonaj    0 фев 18 12:32 output
+-rw-rw-r-- 1 jonaj jonaj 3463 фев 18 10:15 proto.txt
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat output
+итого 28
+drwxrwxr-x 2 jonaj jonaj 4096 фев 18 12:32 .
+drwxrwxr-x 3 jonaj jonaj 4096 фев 17 21:37 ..
+-rw-rw-r-- 1 jonaj jonaj   29 фев 18 12:29 filetail1
+-rw-rw-r-- 1 jonaj jonaj 8393 фев 11 01:00 l20-2012.djvu
+-rw-rw-r-- 1 jonaj jonaj    0 фев 18 12:32 output
+-rw-rw-r-- 1 jonaj jonaj 3463 фев 18 10:15 proto.txt
+
+12. 12
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ echo -e lab1\\nlab2\\nlab3\\nlab4 | uniq
+lab1
+lab2
+lab3
+lab4
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ echo -e lab1\\nlab1\\nlab2 | uniq -c
+      2 lab1
+      1 lab2
 
 
