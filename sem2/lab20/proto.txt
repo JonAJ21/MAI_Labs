@@ -211,3 +211,150 @@ jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ echo -e lab1\\nlab1\\nlab2 |
       1 lab2
 
 
+13. 13
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > fileod1
+100 
+101
+102
+103
+104
+105
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ od -b fileod1 
+0000000 061 060 060 012 061 060 061 012 061 060 062 012 061 060 063 012
+0000020 061 060 064 012 061 060 065 012
+0000030
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ od -c fileod1 
+0000000   1   0   0  \n   1   0   1  \n   1   0   2  \n   1   0   3  \n
+0000020   1   0   4  \n   1   0   5  \n
+0000030
+
+
+14. 15
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ echo "Hello cut" | cut -b 1
+H
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ echo "Hello cut" | cut -b 1,2,3,4,5
+Hello
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filecut
+hello dka; akda k;da omx
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cut 1-7 filecut | sort -r
+cut: вы должны задать список байт, символов или полей
+По команде «cut --help» можно получить дополнительную информацию.
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cut -b 1-7 filecut | sort -r
+hello d
+
+
+15. 25
+
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ head proto.txt
+Вариант 10
+Обязательные команды под номером 11, 26, 2
+
+Начало протокола:
+
+
+1. 11
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ tr x z
+hello xxx      
+hello zzz
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ head -n 2 proto.txt 
+Вариант 10
+Обязательные команды под номером 11, 26, 2
+
+
+16. 31
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ ls
+l20-2012.djvu  proto.txt
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ touch filetouch1
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ ls
+filetouch1  l20-2012.djvu  proto.txt
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ touch -d '2000-01-01 18:59:35' filetouch1
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ stat filetouch1
+  Файл: filetouch1
+  Размер: 0             Блоков: 0          Блок В/В: 4096   пустой обычный файл
+Устройство: 804h/2052d  Инода: 4730315     Ссылки: 1
+Доступ: (0664/-rw-rw-r--)  Uid: ( 1000/   jonaj)   Gid: ( 1000/   jonaj)
+Доступ:        2000-01-01 18:59:35.000000000 +0300
+Модифицирован: 2000-01-01 18:59:35.000000000 +0300
+Изменён:       2023-02-19 19:00:04.675569857 +0300
+Создан:        2023-02-19 18:57:50.634624674 +0300
+
+17. 32
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ find proto.txt
+proto.txt
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ find 1
+find: ‘1’: Нет такого файла или каталога
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ find *
+filetouch
+filetouch1
+l20-2012.djvu
+proto.txt
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ touch 1.txt 2.txt 3.txt 4.txt
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ find ?.txt
+1.txt
+2.txt
+3.txt
+4.txt
+
+18. 38
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > filesplit1
+1
+2
+3
+4
+5
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ split -l 4 filesplit1 split_file
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat split_fileaa
+1
+2
+3
+4
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat split_fileab
+5
+
+19. 21
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ ed example.c 
+64
+a
+.
+p
+}
+a 
+jkdsjkds
+.
+p
+jkdsjkds
+f ed1
+ed1
+w
+73
+q
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat ed1
+#include <stdio.h>
+
+int main() {
+        printf("Hello");
+        return 0;
+}
+jkdsjkds
+
+20. 34
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ df
+Файл.система   1K-блоков Использовано Доступно Использовано% Cмонтировано в
+tmpfs             600892         1960   598932            1% /run
+/dev/nvme0n1p5  51832248     20094480 29072348           41% /
+tmpfs            3004460       136736  2867724            5% /dev/shm
+tmpfs               5120            4     5116            1% /run/lock
+/dev/nvme0n1p1     98304        30997    67307           32% /boot/efi
+/dev/sda4      102623032     12671908 84691864           14% /home
+tmpfs             600892         2432   598460            1% /run/user/1000
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ df -h /dev/sda4
+Файл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+/dev/sda4         98G          13G   81G           14% /home
