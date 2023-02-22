@@ -395,3 +395,14 @@ hello wjkd
 jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ mktemp tempfileXXX
 tempfile08e
 
+23. 30
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ g++ 1.cpp -o cppfile
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ file proto.txt
+proto.txt: Unicode text, UTF-8 text
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ file 1.cpp
+1.cpp: C source, ASCII text
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ file cppfile 
+cppfile: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=26228159925494ac3281e5e67610b5da089550b9, for GNU/Linux 3.2.0, not stripped
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ file -b -i 1.cpp
+text/x-c; charset=us-ascii
