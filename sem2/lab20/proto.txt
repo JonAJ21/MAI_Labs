@@ -358,3 +358,40 @@ tmpfs             600892         2432   598460            1% /run/user/1000
 jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ df -h /dev/sda4
 Файл.система   Размер Использовано  Дост Использовано% Cмонтировано в
 /dev/sda4         98G          13G   81G           14% /home
+
+21. 35
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > file1
+1str
+2str
+3
+str
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > file2
+col1
+col2
+col3
+3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ paste file1 file2
+1str    col1
+2str    col2
+3       col3
+str     3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ paste file1 file2 > file3
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat file3
+1str    col1
+2str    col2
+3       col3
+str     3
+
+22. 39
+
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ mktemp
+/tmp/tmp.mD9bHKmNL2
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat /tmp/tmp.mD9bHKmNL2 
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ cat > /tmp/tmp.mD9bHKmNL2 
+hello wjkd  
+^C
+hello wjkd
+jonaj@JonAJ:~/Desktop/StudyDir/MAI_Labs/sem2/lab20$ mktemp tempfileXXX
+tempfile08e
+
